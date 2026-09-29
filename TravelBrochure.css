@@ -1,0 +1,28 @@
+body {
+    background-color: burlywood;
+}
+
+h2 {
+    border-radius: 5px;
+    border-width: 1px;
+    text-align: center;
+    border: solid 1pt black; 
+    margin: 0; 
+    padding: 30px;
+}
+
+br {
+    border: solid 1pt black; 
+}
+
+.Title {
+    border: 3px solid black;                                          
+    border-radius: 50px; 
+    border-width: 3px;
+    margin: 0; 
+    padding: 30px;
+    text-align: center;
+}
+
+
+
