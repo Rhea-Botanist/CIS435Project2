@@ -2,6 +2,7 @@ body {
     background-color: burlywood;
 }
 
+
 h2 {
     border-radius: 5px;
     border-width: 1px;
@@ -17,11 +18,45 @@ br {
 
 .Title {
     border: 3px solid black;                                          
-    border-radius: 50px; 
-    border-width: 3px;
-    margin: 0; 
-    padding: 30px;
+    border-radius: 80px; 
+    margin: 10px; 
+    padding: 10px;
     text-align: center;
+    
+}
+
+.TitleText h1{
+    font-size: 45px;
+    font-family: monospace, sans-serif;
+    transform: translateY(45px);
+    margin: 0 0 10px 0;
+}
+
+.TitleText p{
+    font-size: 30px;
+    font-family: Times New Roman, Times, serif, sans-serif;
+    transform: translateY(45px);
+    margin: 0 0 5px 0;
+}
+
+.Title img{
+    width: 100px;
+    height: auto;
+    border: 3px solid black;                                          
+    border-radius: 10px; 
+    margin: 0; 
+}
+
+.Title img.left{
+    position: relative;
+    top: -100px;
+    left: -270px;
+}
+
+.Title img.right{
+    position: relative;
+    top: -100px;
+    left: 270px;
 }
 
 
