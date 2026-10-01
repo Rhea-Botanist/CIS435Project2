@@ -11,6 +11,14 @@ body {
     
 }
 
+h2{
+    text-decoration: underline;
+    font-size: 40px;
+    left: 550px;
+    margin-top: 20px;
+}
+
+
 .TitleText h1{
     font-size: 45px;
     font-family: monospace, sans-serif;
@@ -56,9 +64,9 @@ body {
 .Tabs a{
     font-size: 40px;
     display: inline-block;
-    text-decoration: none;
     width: fit-content;
     color: #0077BE;
+    margin-right: 20px;
 }
 
 .AboutClass{
@@ -68,13 +76,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.AboutClass h2{
-    text-decoration: underline;
-    font-size: 50px;
-    left: 550px;
-    margin-top: 20px;
 }
 
 .AboutClass li{
@@ -90,4 +91,23 @@ body {
     height: 600px;
     border: 3px solid black;                                          
     border-radius: 10px; 
+}
+
+.PackagesClass{
+    border: 3px solid black;                                          
+    border-radius: 30px; 
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.ContactClass{
+    border: 3px solid black;                                          
+    border-radius: 30px; 
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
