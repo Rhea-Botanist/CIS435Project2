@@ -2,20 +2,6 @@ body {
     background-color: #a88565;
 }
 
-
-h2 {
-    border-radius: 5px;
-    border-width: 1px;
-    text-align: center;
-    border: solid 1pt black; 
-    margin: 0; 
-    padding: 30px;
-}
-
-br {
-    border: solid 1pt black; 
-}
-
 .Title {
     border: 3px solid black;                                          
     border-radius: 30px; 
@@ -51,6 +37,7 @@ br {
     position: relative;
     top: -100px;
     left: -270px;
+    
 }
 
 .Title img.right{
@@ -59,18 +46,15 @@ br {
     left: 270px;
 }
 
-
 .Tabs {
     border: 3px solid black;                                          
     border-radius: 30px; 
-    margin: 10px; 
-    padding: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .Tabs a{
-    font-size: 25px;
-    padding: 0px, 20px;
+    font-size: 40px;
     display: inline-block;
     text-decoration: none;
     width: fit-content;
@@ -80,7 +64,30 @@ br {
 .AboutClass{
     border: 3px solid black;                                          
     border-radius: 30px; 
-    margin: 10px; 
-    padding: 10px;
-    text-align: center;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.AboutClass h2{
+    text-decoration: underline;
+    font-size: 50px;
+    left: 550px;
+    margin-top: 20px;
+}
+
+.AboutClass li{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.AboutClass img.BeachImage{
+    position: relative;
+    top: -450px;
+    left: 550px;
+    width: 450px;
+    height: 600px;
+    border: 3px solid black;                                          
+    border-radius: 10px; 
 }
