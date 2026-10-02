@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
     <link rel="stylesheet" href="TravelBrochure.css">
         <h1>   
@@ -13,8 +14,7 @@
                 <h1> Travel to Thailand</h1>
                 <p> For friendly people and warm weather</p>
             </div>
-
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree" class="left"/>
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree" class="left" />
             <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree2" class="right"/>
         </div>
     
@@ -27,29 +27,90 @@
 
     <br> 
         <section id="about" class="AboutClass">  
+        <img src="images/ThailandBeach.jpg" alt="Thai Beach" class="BeachImage"/>
         <h2> About </h2>
             <ul>
-                <li>Take a trip down to Thaliand <br> where you'll find amazing beaches and <br> land</li>
-                <li>We have the best food, <br> served from our chefs</li>
-                <li>Main Beach in Koh Ngai <br> Paradise Beach Koh Kradan </li>
-                <li>Thapwarin Resort, <br> beach bungalo </li>
+                <li> Your costal adventure awaits!!!</li>
+                <li>Escape from life, take a trip down to Thaliand and enjoy the sun</li>
             </ul>
-            <img src="images/ThailandBeach.jpg" alt="Thai Beach" class="BeachImage"/>
+            
+        <h2> Resorts </h2>
+            <ul>
+                <li>Stay at the Main Beach in Koh Ngai at the Thapwarin Resort </li>
+                <li>We have air conditioning and fast Wi-Fi</li>
+            </ul>
+
+        <h2> Dining </h2>
+            <ul>
+                <li>Enjoy the local cuisine at the resort or at the local restaurants</li>
+                <li>We have a variety of food options to accomodate for all diets</li>
+            </ul>
+
+        <h2> Services</h2>
+            <ul>
+                <li>We have a variety of services to make your stay more enjoyable</li>
+                <li>We have a spa, massage, and yoga classes</li>
+            </ul>
         </section>
 
     <br> 
-        <section id="packages" class="PackagesClass"> 
-        <h2> Packages </h2>
-
-        </section>
+    <section id="packages" class="PackagesClass"> 
+    <h2> Packages </h2>
+    <img src="images/sunset.jpg" alt="Sunset" class="SunsetImage"/>
+        <section class="PackageTable">
+            <table>
+                <tr>
+                    <th> Package Name </th>
+                    <th> Price </th>
+                    <th> Description </th>
+                </tr>
+                <tr>
+                    <td> Basic </td>
+                    <td> $1000 ฿33,605.24</td>
+                    <td> 3 days, 2 nights at the resort with breakfast included</td>
+                </tr>
+                <tr>
+                    <td> Standard </td>
+                    <td> $1500 ฿50,407.86</td>
+                    <td> 5 days, 4 nights at the resort with breakfast and dinner included</td>
+                </tr>
+                <tr>
+                    <td> Premium </td>
+                    <td> $2000 ฿67,210.48</td>
+                    <td> 7 days, 6 nights at the resort with breakfast, lunch, and dinner included</td>
+                </tr> 
+            </table>
+        </section>  
+    </section>
 
     <br> 
         <section id="contact" class="ContactClass">
-        <h2> Contact </h2>   
+            <h2> Contact Information</h2>   
+            <p>Ready to relax in the conforts of our resort!</p>
+            <p>Contact us today to book your trip!</p>
+            <p>Please note, the maximum number of characters to input is 20</p>
+
+            <form>
+                    <label for="FirstName LastName">Name :</label>
+                    <input type="text" id=""fname" name="fname">
+                <br>
+                    <label for="Email">Email:</label>
+                    <input type="text" id=""Email" name="Email">
+                <br>
+                    <label for="Phone">Phone:</label>
+                    <input type="text" id=""Phone" name="Phone">
+                <br>
+
+                <p>I agree to the terms and conditions and privacy policy</p> 
+                <input type="Submit" value="Submit">
+
+            </form>
         </section>
 
-    <p>&copy All rights reserved</p>
-    <p>Business Email: TravelThai@gmail.com</p>
-    <p>Jai Yen</p>
+    <section class="Bottom">
+        <p>&copy All rights reserved</p>
+        <p>Business Email: TravelThai@gmail.com</p>
+        <p>Jai Yen</p>
+    </section>
     </body>
 </html>

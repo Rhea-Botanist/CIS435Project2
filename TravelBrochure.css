@@ -11,12 +11,12 @@ body {
     
 }
 
-h2{
+ h2{
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 50px;
     left: 550px;
     margin-top: 20px;
-}
+} 
 
 
 .TitleText h1{
@@ -43,15 +43,19 @@ h2{
 
 .Title img.left{
     position: relative;
-    top: -100px;
-    left: -270px;
+    top: -50px;
+    left: -290px;
+    width: 200px;
+    height: 250px;
     
 }
 
 .Title img.right{
     position: relative;
-    top: -100px;
-    left: 270px;
+    top: -50px;
+    left: 290px;
+    width: 200px;
+    height: 250px;
 }
 
 .Tabs {
@@ -62,11 +66,11 @@ h2{
 }
 
 .Tabs a{
-    font-size: 40px;
+    font-size: 50px;
     display: inline-block;
     width: fit-content;
     color: #0077BE;
-    margin-right: 20px;
+    margin-right: 300px;
 }
 
 .AboutClass{
@@ -76,20 +80,25 @@ h2{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    padding-right: 450px;
+    color: #11d4d7;
 }
 
 .AboutClass li{
     font-size: 30px;
     margin-bottom: 10px;
+    font-family: 'Lucida Handwriting', cursive;
+    color: #04f5b1a6;
 }
 
 .AboutClass img.BeachImage{
-    position: relative;
-    top: -450px;
-    left: 550px;
-    width: 450px;
-    height: 600px;
-    border: 3px solid black;                                          
+    position: absolute;
+    top: 50px;
+    left: 1150px;
+    width: 700px;
+    height: 700px;
+    border: 5px solid #2e8b57;                                          
     border-radius: 10px; 
 }
 
@@ -100,8 +109,8 @@ h2{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    color: #3a151c;
 }
-
 
 .ContactClass{
     border: 3px solid black;                                          
@@ -110,4 +119,43 @@ h2{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.PackageTable, th, td{
+    border: 4px solid #3a151c;                                          
+    text-align: center;
+    font-weight: bold;
+    margin-left: 500px;
+    font-size: 40px;
+    color: #e9922f;
+}
+
+.SunsetImage{
+    position: absolute;
+    width: 450px;
+    height: 350px;
+    border: 5px solid #81414b;
+    left: 30px; 
+}
+
+.ContactClass h2{
+    text-align: center;
+}
+.ContactClass p, form{
+    font-family: 'Lucida Console', monospace;   
+    text-align: center;
+    font-size: 30px;
+}
+
+.ContactClass label{
+    width: 300px;
+}
+
+.ContactClass input{
+    text-align: center;
+    font-size: 30px;
+}
+
+.Bottom{
+    text-align: center;
 }
