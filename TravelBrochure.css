@@ -3,18 +3,25 @@ body {
 }
 
 .Title {
-    border: 3px solid black;                                          
-    border-radius: 30px; 
+    border: 1vw  solid black;                                          
+    border-radius: 10vw; 
     margin: 10px; 
     padding: 10px;
     text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-sizing: border-box;
     
 }
 
  h2{
     text-decoration: underline;
     font-size: 50px;
-    left: 550px;
     margin-top: 20px;
 } 
 
@@ -36,31 +43,29 @@ body {
 .Title img{
     width: 100px;
     height: auto;
-    border: 3px solid black;                                          
-    border-radius: 10px; 
+    border: 1vw  solid black;                                          
+    border-radius: 10vw; 
     margin: 0; 
 }
 
 .Title img.left{
-    position: relative;
-    top: -50px;
-    left: -290px;
-    width: 200px;
-    height: 250px;
+    flex: 0 1 40%;
+    position: static;
+    max-width: 100%;
+    
     
 }
 
 .Title img.right{
-    position: relative;
-    top: -50px;
-    left: 290px;
-    width: 200px;
-    height: 250px;
+    flex: 0 1 40%;
+    position: static;
+    max-width: 100%;
+    
 }
 
 .Tabs {
-    border: 3px solid black;                                          
-    border-radius: 30px; 
+    border: 1vw solid black;                                          
+    border-radius: 10vw; 
     text-align: center;
     font-weight: bold;
 }
@@ -71,18 +76,37 @@ body {
     width: fit-content;
     color: #0077BE;
     margin-right: 300px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-sizing: border-box;
 }
 
 .AboutClass{
-    border: 3px solid black;                                          
-    border-radius: 30px; 
-    text-align: left;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    padding-right: 450px;
+    border: 1vw solid black;                                          
+    border-radius: 1vw; 
+    padding-right: 40px;
     color: #11d4d7;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    box-sizing: border-box;
+    
+}
+
+.AboutSection{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
 }
 
 .AboutClass li{
@@ -93,18 +117,19 @@ body {
 }
 
 .AboutClass img.BeachImage{
-    position: absolute;
-    top: 50px;
-    left: 1150px;
-    width: 700px;
-    height: 700px;
-    border: 5px solid #2e8b57;                                          
-    border-radius: 10px; 
+    flex: 0 1 40%;
+    position: static;
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border: 1vw solid #2e8b57; 
+                                      
+
 }
 
 .PackagesClass{
-    border: 3px solid black;                                          
-    border-radius: 30px; 
+    border: 1vw solid black;                                          
+    border-radius: 10vw; 
     text-align: left;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -113,8 +138,8 @@ body {
 }
 
 .ContactClass{
-    border: 3px solid black;                                          
-    border-radius: 30px; 
+    border: 1vw solid black;                                          
+    border-radius: 10vw; 
     text-align: left;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -122,7 +147,7 @@ body {
 }
 
 .PackageTable, th, td{
-    border: 4px solid #3a151c;                                          
+    border: 1vw solid #3a151c;                                          
     text-align: center;
     font-weight: bold;
     margin-left: 500px;
@@ -131,10 +156,12 @@ body {
 }
 
 .SunsetImage{
-    position: absolute;
+    flex: 0 1 40%;
+    position: static;
+    max-width: 100%;
     width: 450px;
     height: 350px;
-    border: 5px solid #81414b;
+    border: 1vw solid #81414b;
     left: 30px; 
 }
 
