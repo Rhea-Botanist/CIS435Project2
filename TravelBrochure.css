@@ -1,12 +1,35 @@
-body {
-    background-color: #a88565;
+:root{
+    --primary-color: #a88565;
+    --secondary-color: #3a151c;
+    --text-color: black; 
+    --accent-color: #0077BE;
+    --spacing: 10px;
 }
 
+body {
+    margin: 0;
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: grid;
+    grid-gap: var(--spacing);
+    grid-template-areas: "header" "main" "footer";
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area:footer;}
+
+h2{
+    text-decoration: underline;
+    font-size: 2.5rem;
+    margin-top: var(--spacing);
+} 
+
 .Title {
-    border: 1vw  solid black;                                          
-    border-radius: 10vw; 
-    margin: 10px; 
-    padding: 10px;
+    border: 4px solid var(--secondary-color);                                          
+    border-radius: var(--spacing); 
+    margin-bottom: var(--spacing); 
+    padding: var(--spacing);
     text-align: center;
 
     display: flex;
@@ -14,27 +37,16 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    box-sizing: border-box;
-    
 }
 
- h2{
-    text-decoration: underline;
-    font-size: 50px;
-    margin-top: 20px;
-} 
-
-
 .TitleText h1{
-    font-size: 45px;
+    font-size: 2.5rem;
     font-family: monospace, sans-serif;
-    transform: translateY(45px);
-    margin: 0 0 10px 0;
+    margin: 0 0 var(--spacing) 0;
 }
 
 .TitleText p{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-family: Times New Roman, Times, serif, sans-serif;
     transform: translateY(45px);
     margin: 0 0 5px 0;
@@ -43,7 +55,7 @@ body {
 .Title img{
     width: 100px;
     height: auto;
-    border: 1vw  solid black;                                          
+    border: 4px solid var(--secondary-color);                                          
     border-radius: 10vw; 
     margin: 0; 
 }
@@ -52,44 +64,50 @@ body {
     flex: 0 1 40%;
     position: static;
     max-width: 100%;
-    
-    
 }
 
 .Title img.right{
     flex: 0 1 40%;
     position: static;
-    max-width: 100%;
-    
+    max-width: 100%; 
 }
 
 .Tabs {
-    border: 1vw solid black;                                          
-    border-radius: 10vw; 
-    text-align: center;
+    border: 4px solid var(--secondary-color);     
+    border-radius: var(--spacing);  
+    padding: var(--spacing);
     font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .Tabs a{
-    font-size: 50px;
-    display: inline-block;
-    width: fit-content;
+    font-size: 2rem;
     color: #0077BE;
-    margin-right: 300px;
+    text-decoration: none;
+    padding: var(--spacing);
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    box-sizing: border-box;
+}
+
+.Tabs a:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--spacing);
 }
 
 .AboutClass{
-    border: 1vw solid black;                                          
-    border-radius: 1vw; 
-    padding-right: 40px;
+    border: 4px solid var(--secondary-color);                                          
+    border-radius: var(--spacing); 
+    padding: var(--spacing);
     color: #11d4d7;
     text-align: left;
 
@@ -98,91 +116,201 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    gap: 40px;
-    box-sizing: border-box;
-    
 }
 
 .AboutSection{
     display: flex;
     flex-direction: column;
     flex: 1 1 300px;
+    padding: var(--spacing);
 }
 
 .AboutClass li{
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing);
     font-family: 'Lucida Handwriting', cursive;
     color: #04f5b1a6;
 }
 
 .AboutClass img.BeachImage{
     flex: 0 1 40%;
-    position: static;
     max-width: 100%;
     width: 800px;
     height: auto;
-    border: 1vw solid #2e8b57; 
-                                      
-
+    object-fit: cover;
+    border: 4px solid #2e8b57; 
 }
 
 .PackagesClass{
-    border: 1vw solid black;                                          
-    border-radius: 10vw; 
-    text-align: left;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: #3a151c;
+    border: 4px solid var(--secondary-color);                                          
+    border-radius: var(--spacing); 
+    color: var(--secondary-color);
+    padding: var(--spacing);
+    display: grid;
+    grid-gap: var(--spacing);
+    grid-template-areas: "title title" "image table";
 }
 
-.ContactClass{
-    border: 1vw solid black;                                          
-    border-radius: 10vw; 
-    text-align: left;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+.PackageClass h2{
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.PackageTable{
+    grid-area: table;
+    align-self: center;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
 }
 
 .PackageTable, th, td{
-    border: 1vw solid #3a151c;                                          
+    border: 2px solid var(--secondary-color);    
     text-align: center;
     font-weight: bold;
-    margin-left: 500px;
-    font-size: 40px;
+    font-size: 1.25rem;
     color: #e9922f;
+    padding: var(--spacing);
 }
 
 .SunsetImage{
-    flex: 0 1 40%;
-    position: static;
+    grid-area: image;
+    align-self: center;
+    width: 100%;
     max-width: 100%;
-    width: 450px;
-    height: 350px;
-    border: 1vw solid #81414b;
-    left: 30px; 
+    height: auto;
+    object-fit: cover;
+    border: 4px solid #81414b;
+}
+
+.ContactClass{
+    border: 4px solid var(--spacing);                                          
+    border-radius: var(--spacing);
+    padding: var(--spacing);
+    text-align: center;
 }
 
 .ContactClass h2{
     text-align: center;
 }
+
 .ContactClass p, form{
     font-family: 'Lucida Console', monospace;   
     text-align: center;
-    font-size: 30px;
+    font-size: 1.25rem;
 }
 
 .ContactClass label{
-    width: 300px;
+    flex: 0 0 150px;
+    text-align: right;
+    padding-right: var(--spacing);
 }
 
-.ContactClass input{
-    text-align: center;
-    font-size: 30px;
+.ContactClass input, select, textarea{
+    flex: 1 1 auto;
+    max-width: 100%;
+    font-size: 1.25rem;
+    padding-right: 5px;
+    border: 2px solid var(--secondary-color);
+}
+
+.ContactClass input[type="submit"]:hover{
+    background-color: var(--secondary-color);
 }
 
 .Bottom{
     text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: var(--spacing);
+    padding: var(--spacing);
+}
+
+@media only screen and (min-width: 1024px){
+    body{
+        padding: 30px;
+    }
+    min{
+        grid-gap: 30px;
+    }
+    h2{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+    h2{
+        font-size: 2rem;
+    }
+    .TitleText h1{
+        font-size: 2rem;
+    }
+    .TitleText p, .AboutClassli{
+        font-size: 1.25rem;
+    }
+    .Tabs a{
+        font-size: 1.5rem;
+    }
+    th,td{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .Title{
+        flex-direction: column;
+    }
+    .Title img{
+        flex:none;
+        width: 40%;
+    }
+    .TitleText h1{
+        font-size: 1rem;
+    }
+    .TitleText p, .AboutClass li{
+        font-size: 1rem;
+    }
+    .Tabs{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Tabs a{
+        font-size: 1.25rem;
+    }
+    .AboutClass{
+        flex-direction: column;
+    }
+    .AboutClass img.BeachImage, .SunsetImage{
+        flex:none;
+        width: 100%;
+    }
+    .PackageTable{
+        flex: none;
+        width: 100%;
+        padding-left: 0;
+        margin-top: var(--spacing);
+    }
+    .PackagesClass{
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "image" "table";
+    }
+    .field{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .ContactClass label{
+        flex: none;
+        text-align:left;
+        padding-right:0;
+    }
+    th, td{
+        font-size: 0.8rem;
+        padding: 5px;
+    }
 }

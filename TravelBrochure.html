@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <body>  
+<html lan="en">
+<head>   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-    <link rel="stylesheet" href="TravelBrochure.css">
-        <h1>   
-            <title>Thailand Travel Brochure</title>
-        </h1>
-    </head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="TravelBrochure.css">  
+    <title>Thailand Travel Brochure</title>
+</head>
 
+<body>
+    <header>
         <div class="Title">     
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree" class="left" /> 
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the left side of banner" class="left" /> 
             <div class="TitleText">
                 <h1> Travel to Thailand</h1>
                 <p> For friendly people and warm weather</p>
             </div>
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree2" class="right"/>
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" class="right"/>
         </div>
     
         <nav class="Tabs">
@@ -23,12 +23,13 @@
             <a href="#packages"> Packages</a> 
             <a href="#contact"> Contact</a> 
         </nav>
+    </header>
 
-
-    <br> 
-        <section id="about" class="AboutClass">  
+    <br>
+    <main> 
+    <section id="about" class="AboutClass">  
         <img src="images/ThailandBeach.jpg" alt="Thai Beach" class="BeachImage"/>
-        <div class="AboutSection">
+        <article class="AboutSection">
             <h2> About </h2>
                 <ul>
                     <li> Your costal adventure awaits!!!</li>
@@ -52,37 +53,37 @@
                     <li>We have a variety of services to make your stay more enjoyable</li>
                     <li>We have a spa, massage, and yoga classes</li>
                 </ul>
-            </div>
-        </section>
+        </article>
+    </section>
 
     <br> 
     <section id="packages" class="PackagesClass"> 
     <h2> Packages </h2>
     <img src="images/sunset.jpg" alt="Sunset" class="SunsetImage"/>
-        <section class="PackageTable">
+        <div class="PackageTable">
             <table>
-                <tr>
-                    <th> Package Name </th>
-                    <th> Price </th>
-                    <th> Description </th>
-                </tr>
-                <tr>
-                    <td> Basic </td>
-                    <td> $1000 ฿33,605.24</td>
-                    <td> 3 days, 2 nights at the resort with breakfast included</td>
-                </tr>
-                <tr>
-                    <td> Standard </td>
-                    <td> $1500 ฿50,407.86</td>
-                    <td> 5 days, 4 nights at the resort with breakfast and dinner included</td>
-                </tr>
-                <tr>
-                    <td> Premium </td>
-                    <td> $2000 ฿67,210.48</td>
-                    <td> 7 days, 6 nights at the resort with breakfast, lunch, and dinner included</td>
-                </tr> 
+                    <tr>
+                        <th> Package Name </th>
+                        <th> Price </th>
+                        <th> Description </th>
+                    </tr>
+                    <tr>
+                        <td> Basic </td>
+                        <td> $1000 ฿33,605.24</td>
+                        <td> 3 days, 2 nights at the resort with breakfast included</td>
+                    </tr>
+                    <tr>
+                        <td> Standard </td>
+                        <td> $1500 ฿50,407.86</td>
+                        <td> 5 days, 4 nights at the resort with breakfast and dinner included</td>
+                    </tr>
+                    <tr>
+                        <td> Premium </td>
+                        <td> $2000 ฿67,210.48</td>
+                        <td> 7 days, 6 nights at the resort with breakfast, lunch, and dinner included</td>
+                    </tr> 
             </table>
-        </section>  
+        </div>  
     </section>
 
     <br> 
@@ -93,26 +94,41 @@
             <p>Please note, the maximum number of characters to input is 20</p>
 
             <form>
+                <div class="field">
                     <label for="FirstName LastName">Name :</label>
-                    <input type="text" id=""fname" name="fname">
-                <br>
+                    <input type="text" id="fname" name="fname">
+                </div>
+
+                <div class="field">
                     <label for="Email">Email:</label>
-                    <input type="text" id=""Email" name="Email">
-                <br>
-                    <label for="Phone">Phone:</label>
-                    <input type="text" id=""Phone" name="Phone">
-                <br>
+                    <input type="email" id="email" name="email">
+                </div>
+            
+                <div class="field">
+                    <label for="package">Package:</label>
+                    <select id="package" name="package">
+                        <option value="basic">Basic</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                    
+                <div class="field">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" maxlength="20"></textarea>
+                </div>
 
                 <p>I agree to the terms and conditions and privacy policy</p> 
                 <input type="Submit" value="Submit">
-
             </form>
         </section>
+    </main>
 
-    <section class="Bottom">
+    <footer class="Bottom">
         <p>&copy All rights reserved</p>
         <p>Business Email: TravelThai@gmail.com</p>
         <p>Jai Yen</p>
-    </section>
-    </body>
+    </footer>
+
+</body>
 </html>
