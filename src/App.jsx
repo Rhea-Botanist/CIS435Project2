@@ -23,20 +23,13 @@ function App() {
     return(
         <div className="app-container">
             <div className="Title">     
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the left side of banner" class="left" /> 
+            <img src="public/91bh_1alo_210629.jpg" alt="Palm Tree on the left side of banner" className="left" /> 
             <div className="TitleText">
                 <h1> Travel to Thailand</h1>
                 <p> For friendly people and warm weather</p>
             </div>
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" className="right"/>
+            <img src="public/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" className="right"/>
         </div>
-    
-        <nav className="Tabs">
-            <a href="#about"> About </a> 
-            <a href="#packages"> Packages</a> 
-            <a href="#contact"> Contact</a> 
-            <a href="#search"> Search Contact</a> 
-        </nav>
  
         <main className="main-content">
             <ContactForm onAddContact={handleAddContact} />

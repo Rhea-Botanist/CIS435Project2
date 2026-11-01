@@ -4,6 +4,7 @@ function ContactForm({ onAddContact }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
+    const [errorMessage, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +21,7 @@ function ContactForm({ onAddContact }) {
     return (
         <form className="contact-form" onSubmit={handleSubmit}>
             <h2>Add Contact</h2>
-            {error && <p className="error">{error}</p>}
+            {errorMessage && <p className="error">{errorMessage}</p>}
             
             <div className="form-group">
                 <label htmlFor="name">Name *</label>
