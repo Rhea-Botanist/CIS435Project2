@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ContactList from '../ContactList';
-import ContactForm from '../ContactForm';
 import './App.css';
-import searchBar from '../searchBar';
+import ContactList from './ContactList';
+import ContactForm from './ContactForm';
+import SearchBar from './SearchBar';
 
 function App() {
     const [contacts, setContacts] = useState([]);
@@ -22,16 +22,16 @@ function App() {
 
     return(
         <div className="app-container">
-            <div class="Title">     
+            <div className="Title">     
             <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the left side of banner" class="left" /> 
-            <div class="TitleText">
+            <div className="TitleText">
                 <h1> Travel to Thailand</h1>
                 <p> For friendly people and warm weather</p>
             </div>
-            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" class="right"/>
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" className="right"/>
         </div>
     
-        <nav class="Tabs">
+        <nav className="Tabs">
             <a href="#about"> About </a> 
             <a href="#packages"> Packages</a> 
             <a href="#contact"> Contact</a> 
@@ -39,8 +39,8 @@ function App() {
         </nav>
  
         <main className="main-content">
-            <contactForm onAddContact={handleAddContact} />
-            <searchBar filterText={filterText} onFilterChange={setFilterText} />
+            <ContactForm onAddContact={handleAddContact} />
+            <SearchBar filterText={filterText} onFilterChange={setFilterText} />
             <ContactList contacts={filterContacts} onDeleteContact={handleDeleteContact} filterText={filterText} hasContacts={contacts.length > 0} />
         </main>
     </div>
