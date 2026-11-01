@@ -1,0 +1,50 @@
+import React, { useState } from 'react';
+import ContactList from './ContactList';
+import ContactForm from './ContactForm';
+import './App.css';
+import searchBar from './searchBar';
+
+function App() {
+    const [contacts, setContacts] = useState([]);
+    const [filterText, setFilterText] = useState('');
+
+    const handleAddContact = (newContact) => {
+        setContacts((prev) => [...prev, { ...newContact, id: Date.now().toString() }]);
+    };
+
+    const handleDeleteContact = (id) => {
+        setContacts((prev) => prev.filter((c) => c.id !== id));
+    };
+
+    const filterContacts = contacts.filter((c) => 
+        c.name.toLowerCase().includes(filterText.toLowerCase()) || c.email.toLowerCase().includes(filterText.toLowerCase())
+    );
+
+    return(
+        <div className="app-container">
+            <div class="Title">     
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the left side of banner" class="left" /> 
+            <div class="TitleText">
+                <h1> Travel to Thailand</h1>
+                <p> For friendly people and warm weather</p>
+            </div>
+            <img src="images/91bh_1alo_210629.jpg" alt="Palm Tree on the right side of banner" class="right"/>
+        </div>
+    
+        <nav class="Tabs">
+            <a href="#about"> About </a> 
+            <a href="#packages"> Packages</a> 
+            <a href="#contact"> Contact</a> 
+            <a href="#search"> Search Contact</a> 
+        </nav>
+ 
+        <main className="main-content">
+            <contactForm onAddContact={handleAddContact} />
+            <searchBar filterText={filterText} onFilterChange={setFilterText} />
+            <ContactList contacts={filterContacts} onDeleteContact={handleDeleteContact} filterText={filterText} hasContacts={contacts.length > 0} />
+        </main>
+    </div>
+);
+}
+
+export default App;
